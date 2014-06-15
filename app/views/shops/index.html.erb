@@ -15,7 +15,7 @@
 <%= @shops.each do |shop| %>
 <ul>
   <li>
-    <%= shop.name %>, <%= shop.specialty %>
+    <%= link_to "#{shop.name}", shop_path(shop) %>, <%= shop.specialty %>
   </li>
 </ul>
 <% end %>

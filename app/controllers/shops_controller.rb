@@ -30,6 +30,12 @@ class ShopsController < ApplicationController
     redirect_to shops_path
   end
 
+  def destroy
+    @shop = Shop.find(params[:id]).delete
+
+    redirect_to shops_path
+  end
+
   private
   def shop_params
     params.require(:shop).permit(:name, :specialty)

@@ -1,0 +1,21 @@
+<%= form_for @shop do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+  <p>
+    <%= f.label :specialty %>
+    <%= f.text_field :specialty %>
+  </p>
+  <p>
+    <%= f.submit 'Add shop' %>
+  </p>
+<% end %>
+
+<%= @shops.each do |shop| %>
+<ul>
+  <li>
+    <%= shop.name %>, <%= shop.specialty %>
+  </li>
+</ul>
+<% end %>
